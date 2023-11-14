@@ -22,8 +22,6 @@ release:
 	GOOS=openbsd GOARCH=386 go build -o ./bin/${BINARY}_${VERSION}_openbsd_386
 	GOOS=openbsd GOARCH=amd64 go build -o ./bin/${BINARY}_${VERSION}_openbsd_amd64
 	GOOS=solaris GOARCH=amd64 go build -o ./bin/${BINARY}_${VERSION}_solaris_amd64
-	GOOS=windows GOARCH=386 go build -o ./bin/${BINARY}_${VERSION}_windows_386
-	# GOOS=windows GOARCH=amd64 go build -o ./bin/${BINARY}_${VERSION}_windows_amd64
 
 package: build
 	mkdir -p ./binaries
