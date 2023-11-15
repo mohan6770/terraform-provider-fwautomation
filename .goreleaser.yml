@@ -31,8 +31,17 @@ signs:
     args:
       - "--batch"
       - "--detach-sign"
+      - "--local-user"
+      - "{{ .Env.GPG_FINGERPRINT }}"
+      - "--output"
       - "${signature}"
       - "${artifact}"
+  - name: Debug GPG
+    run: |
+      echo "GPG Private Key: $GPG_PRIVATE_KEY"
+      echo "GPG Fingerprint: $GPG_FINGERPRINT"
+      echo "Passphrase: $PASSPHRASE"
+
 release:
   draft: true  # You can remove this line if you want automatic release
 changelog:
