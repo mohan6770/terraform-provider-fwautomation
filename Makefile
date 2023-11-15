@@ -3,7 +3,7 @@ HOSTNAME=registry.terraform.io
 NAMESPACE=mgeorge6770
 NAME=fwautomation
 BINARY=terraform-provider-${NAME}
-VERSION=v1.1.5
+VERSION=v1.1.6
 OS_ARCH=linux_amd64
 
 default: install
@@ -16,7 +16,7 @@ release:
 	# GOOS=freebsd GOARCH=386 go build -o ./bin/${BINARY}_${VERSION}_freebsd_386
 	# GOOS=freebsd GOARCH=amd64 go build -o ./bin/${BINARY}_${VERSION}_freebsd_amd64
 	# GOOS=freebsd GOARCH=arm go build -o ./bin/${BINARY}_${VERSION}_freebsd_arm
-	GOOS=linux GOARCH=386 go build -o ./bin/${BINARY}_${VERSION}_linux_386
+	# GOOS=linux GOARCH=386 go build -o ./bin/${BINARY}_${VERSION}_linux_386
 	GOOS=linux GOARCH=amd64 go build -o ./bin/${BINARY}_${VERSION}_linux_amd64
 	GOOS=linux GOARCH=arm go build -o ./bin/${BINARY}_${VERSION}_linux_arm
 	# GOOS=openbsd GOARCH=386 go build -o ./bin/${BINARY}_${VERSION}_openbsd_386
