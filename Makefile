@@ -1,9 +1,9 @@
 TEST?=$$(go list ./... | grep -v 'vendor')
 HOSTNAME=registry.terraform.io
-NAMESPACE=jgrancell
+NAMESPACE=mgeorge6770
 NAME=fwautomation
 BINARY=terraform-provider-${NAME}
-VERSION=v1.1.0
+VERSION=v1.1.2
 OS_ARCH=linux_amd64
 
 default: install
