@@ -18,14 +18,14 @@ builds:
     - '-s -w -X main.version={{.Version}} -X main.commit={{.Commit}}'
   goos:
     - freebsd
-    # - windows
+    - windows
     - linux
-    # - darwin
+    - darwin
   goarch:
     - amd64
     - '386'
-    # - arm
-    # - arm64
+    - arm
+    - arm64
   ignore:
     - goos: darwin
       goarch: '386'
@@ -46,7 +46,7 @@ signs:
       - "{{ .Env.GPG_FINGERPRINT }}" # set this environment variable for your signing key
       - "--output"
       - "${signature}"
-      # - "--detach-sign"
+      - "--detach-sign"
       - "${artifact}"
 release:
   # If you want to manually examine the release before its live, uncomment this line:
