@@ -3,7 +3,7 @@ HOSTNAME=registry.terraform.io
 NAMESPACE=mgeorge6770
 NAME=fwautomation
 BINARY=terraform-provider-${NAME}
-VERSION=v1.1.6
+VERSION=1.1.7
 OS_ARCH=linux_amd64
 
 default: install
