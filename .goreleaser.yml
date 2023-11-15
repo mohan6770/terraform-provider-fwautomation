@@ -46,8 +46,8 @@ signs:
       - "{{ .Env.GPG_FINGERPRINT }}" # set this environment variable for your signing key
       - "--output"
       - "${signature}"
-      - "--detach-sign"
-      - "${artifact}"
+      # - "--detach-sign"
+      # - "${artifact}"
 release:
   # If you want to manually examine the release before its live, uncomment this line:
   # draft: true
